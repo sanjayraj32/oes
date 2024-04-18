@@ -8,7 +8,8 @@ use autotest;
 
 sub load_boot_tests_oes{
     if (get_var("ISO_MAXSIZE")){
-        loadtest "tests/isosize.pm";
+        
+        autotest::loadtest 'tests/isosize.pm';
     }
     }
      if (get_var("INSTALL")){
