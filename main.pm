@@ -8,11 +8,13 @@ use autotest;
 
 sub load_boot_tests_oes{
     if (get_var("ISO_MAXSIZE")){
-        loadtest "tests/isosize";
+        loadtest "tests/isosize.pm";
+    }
     }
      if (get_var("INSTALL")){
             # Default Installation
             load_boot_tests_oes;
+            }
 
 
 1;
