@@ -28,7 +28,7 @@ def switch_keyboard_layout():
         send_key('alt-k')
         send_key_until_needlematch("keyboard-layout", 'up', 60)
     if get_var('DESKTOP') == 'textmode':
-        wait_screen_change { send_key 'ret' } # Confirm selection in text mode
+        wait_screen_change(send_key('ret')) # Confirm selection in text mode
 
 def run():
     mouse_hide()
