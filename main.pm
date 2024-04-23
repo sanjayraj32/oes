@@ -12,10 +12,21 @@ sub load_boot_tests_oes{
         autotest::loadtest 'tests/isosize.pm';
     }
     }
-     if (get_var("INSTALL")){
-            # Default Installation
-            load_boot_tests_oes;
-            }
+
+## INSTALLATION
+sub load_inst_tests_oes{
+    autotest::loadtest 'tests/welcome.pm';
+   
+    }
+    
+    if (get_var("INSTALL")){
+     if (!get_var("AUTOYAST")){
+        # Default Installation
+        load_boot_tests_oes;
+        load_inst_tests_oes;
+        
+        }
+        }
 
 
 1;
