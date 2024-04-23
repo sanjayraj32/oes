@@ -21,7 +21,7 @@ def switch_keyboard_layout():
         send_key('alt-y')  # Keyboard Test in graphic mode
 
         # Type "azerty" to test the keyboard layout
-        type_string "azerty"
+        type_string("azerty")
         assert_screen('keyboard-test-{keyboard_layout}')
 
         # Select back default keyboard layout
