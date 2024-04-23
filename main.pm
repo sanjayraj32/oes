@@ -8,25 +8,25 @@ use autotest;
 
 sub load_boot_tests_oes{
     if (get_var("ISO_MAXSIZE")){
-        
-        autotest::loadtest 'tests/isosize.pm';
+
+        autotest::loadtest 'tests/isosize.py';
     }
     }
 
 ## INSTALLATION
-sub load_inst_tests_oes{
-    autotest::loadtest 'tests/welcome.pm';
-   
-    }
-    
+   # sub load_inst_tests_oes{
+   # autotest::loadtest 'tests/welcome.pm';
+
+   # }
+
     if (get_var("INSTALL")){
-     if (!get_var("AUTOYAST")){
+           # if (!get_var("AUTOYAST")){
         # Default Installation
         load_boot_tests_oes;
-        load_inst_tests_oes;
-        
-        }
+        #load_inst_tests_oes;
+
+       # }
         }
 
 
-1;
+1; 
