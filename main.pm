@@ -17,7 +17,7 @@ sub load_boot_tests_oes{
     sub load_inst_tests_oes{
     autotest::loadtest 'tests/welcome.py';
 
-   # }
+    }
 
     if (get_var("INSTALL")){
            # if (!get_var("AUTOYAST")){
