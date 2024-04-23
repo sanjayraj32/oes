@@ -14,8 +14,8 @@ sub load_boot_tests_oes{
     }
 
 ## INSTALLATION
-   # sub load_inst_tests_oes{
-   # autotest::loadtest 'tests/welcome.pm';
+    sub load_inst_tests_oes{
+    autotest::loadtest 'tests/welcome.py';
 
    # }
 
@@ -23,9 +23,9 @@ sub load_boot_tests_oes{
            # if (!get_var("AUTOYAST")){
         # Default Installation
         load_boot_tests_oes;
-        #load_inst_tests_oes;
+        load_inst_tests_oes;
 
-       # }
+        }
         }
 
 
